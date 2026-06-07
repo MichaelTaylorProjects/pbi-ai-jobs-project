@@ -1,0 +1,29 @@
+relationship AutoDetected_4a64f231-830d-4657-aeca-30aa36963fd4
+	fromColumn: bridge_employee_skill.Skill_ID
+	toColumn: dim_skill.Skill_ID
+
+relationship AutoDetected_d52d097f-91fd-4da4-8c43-cd103d732848
+	fromColumn: fact_jobs.Job_ID
+	toColumn: dim_job.Job_ID
+
+relationship AutoDetected_83e598b0-8a5d-4089-8f15-591b0eb56e70
+	fromColumn: fact_jobs.Education_ID
+	toColumn: dim_education.Education_ID
+
+relationship AutoDetected_994f3077-3129-4eef-80c8-a975671fc89a
+	fromColumn: fact_jobs.Industry_ID
+	toColumn: dim_industry.Industry_ID
+
+relationship AutoDetected_f60f90cb-6c22-42ae-9e78-a455b1579106
+	fromColumn: fact_jobs.Location_ID
+	toColumn: dim_location.Location_ID
+
+relationship AutoDetected_ae1ad97a-c9e8-4b66-b1dd-1b1f0803c9ae
+	fromColumn: fact_jobs.Worktype_ID
+	toColumn: dim_worktype.Worktype_ID
+
+relationship AutoDetected_503f5092-a6d6-4340-a830-eacb224a3d19
+	crossFilteringBehavior: bothDirections
+	fromColumn: fact_jobs.Employee_ID
+	toColumn: bridge_employee_skill.Employee_ID
+

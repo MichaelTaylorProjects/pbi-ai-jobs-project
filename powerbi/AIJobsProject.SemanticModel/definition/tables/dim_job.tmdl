@@ -1,0 +1,57 @@
+table dim_job
+	lineageTag: 80331446-d1b5-49b9-8bb5-2f7bbf0e42d8
+
+	column Job_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1df19a67-3130-41d5-9da2-114b79678834
+		summarizeBy: none
+		sourceColumn: Job_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Job_Title
+		dataType: string
+		lineageTag: 818f0658-4ded-45a7-8a3c-940500ad56ed
+		summarizeBy: none
+		sourceColumn: Job_Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Automation_Level
+		dataType: string
+		lineageTag: e6d3dfb8-62ba-4244-9645-e4753a68bd6d
+		summarizeBy: none
+		sourceColumn: Automation_Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column AI_Tool_Usage
+		dataType: string
+		lineageTag: 4e255d4c-c115-4434-9812-1012e0e0e581
+		summarizeBy: none
+		sourceColumn: AI_Tool_Usage
+
+		annotation SummarizationSetBy = Automatic
+
+	column Upskilling_Needed
+		dataType: string
+		lineageTag: 59f791ff-dfdb-4b82-ae66-c86024522259
+		summarizeBy: none
+		sourceColumn: Upskilling_Needed
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_job = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(File.Contents("C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\data\processed\dim_job.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

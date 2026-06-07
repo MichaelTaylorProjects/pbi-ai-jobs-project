@@ -1,0 +1,50 @@
+table 'Measure Selector'
+	lineageTag: 674d3881-9405-4f8a-9458-1560a82a0c5e
+
+	column 'Measure Selector'
+		lineageTag: f05f6526-3751-4534-a400-0752f4c20f20
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Measure Selector Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Measure Selector Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Measure Selector Fields'
+		isHidden
+		lineageTag: 3e40c109-cb9f-4dee-b0a2-7f6b0cc484e8
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Measure Selector Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Measure Selector Order'
+		isHidden
+		formatString: 0
+		lineageTag: 91565b70-fdcd-4bc5-8bf8-392f9840fce6
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Measure Selector' = calculated
+		mode: import
+		source =
+				{
+				    ("Average AI Risk", NAMEOF('MeasureTable'[Average AI Risk]), 0),
+				    ("Average Salary", NAMEOF('MeasureTable'[Average Salary]), 1),
+				    ("Average Satisfaction", NAMEOF('MeasureTable'[Average Satisfaction]), 2),
+				    ("Employee Count", NAMEOF('MeasureTable'[Employee Count]), 3)
+				}
+
+	annotation PBI_Id = ace0fb9baec94ff39ed7f88b2a18c975
+

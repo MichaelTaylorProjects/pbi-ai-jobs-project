@@ -1,0 +1,41 @@
+table dim_industry
+	lineageTag: b2bd909a-034d-49e6-b661-25ce275ec093
+
+	column Industry_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2478cc10-19c1-40cc-ae61-6c5e3e6c7ce5
+		summarizeBy: none
+		sourceColumn: Industry_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Industry
+		dataType: string
+		lineageTag: 2b9ecd13-d0d9-4e02-94f5-9938cdee8f0d
+		summarizeBy: none
+		sourceColumn: Industry
+
+		annotation SummarizationSetBy = Automatic
+
+	column Company_Size
+		dataType: string
+		lineageTag: 4815e6a8-c52f-4360-b114-c8bf9e5389f1
+		summarizeBy: none
+		sourceColumn: Company_Size
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_industry = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(File.Contents("C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\data\processed\dim_industry.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

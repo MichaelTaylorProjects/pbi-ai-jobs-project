@@ -1,0 +1,160 @@
+table fact_jobs
+	lineageTag: 8a5d09c9-618f-4587-9b48-4ae7871cfd22
+
+	column Employee_ID
+		dataType: string
+		isHidden
+		lineageTag: 692b2b16-20a4-4927-bd65-bad6e0320b9e
+		summarizeBy: none
+		sourceColumn: Employee_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Job_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 11475201-c148-4746-81c0-4dcfbdfe10b6
+		summarizeBy: none
+		sourceColumn: Job_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 81c5601e-428a-485e-a1c3-612fb01ac333
+		summarizeBy: none
+		sourceColumn: Location_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Industry_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f7c8157d-3941-426d-b394-0a832bc315ba
+		summarizeBy: none
+		sourceColumn: Industry_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Education_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3bc576c5-823b-4bee-8c28-b0a251987d79
+		summarizeBy: none
+		sourceColumn: Education_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Worktype_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3a79aa81-6f05-4c25-b409-23849e821889
+		summarizeBy: none
+		sourceColumn: Worktype_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Years_Experience
+		dataType: int64
+		formatString: 0
+		lineageTag: ec9959e9-acba-4deb-acd7-4d15248f0601
+		summarizeBy: none
+		sourceColumn: Years_Experience
+
+		annotation SummarizationSetBy = User
+
+	column AI_Replacement_Risk
+		dataType: double
+		lineageTag: 0326b40e-03b1-45ce-b5c0-21a57feae03b
+		summarizeBy: none
+		sourceColumn: AI_Replacement_Risk
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Future_Demand_Score
+		dataType: double
+		lineageTag: 6fe58abc-a61c-49a4-bf74-f14c8c0726f0
+		summarizeBy: none
+		sourceColumn: Future_Demand_Score
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Average_Salary_USD
+		dataType: int64
+		formatString: 0
+		lineageTag: 54bb6c04-9c4b-4755-a0d3-0971441185f2
+		summarizeBy: sum
+		sourceColumn: Average_Salary_USD
+
+		annotation SummarizationSetBy = Automatic
+
+	column Job_Growth_2030
+		dataType: int64
+		formatString: 0
+		lineageTag: cee26e05-7cb8-466e-be82-dc683778e440
+		summarizeBy: none
+		sourceColumn: Job_Growth_2030
+
+		annotation SummarizationSetBy = User
+
+	column Work_Hours_Per_Week
+		dataType: int64
+		formatString: 0
+		lineageTag: db2fea2b-e38f-41f2-b3f6-2d482db8afba
+		summarizeBy: none
+		sourceColumn: Work_Hours_Per_Week
+
+		annotation SummarizationSetBy = User
+
+	column Performance_Score
+		dataType: double
+		lineageTag: 2aa16677-4dfe-46df-8bb3-a6fa2c74bf8f
+		summarizeBy: none
+		sourceColumn: Performance_Score
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Job_Satisfaction
+		dataType: double
+		lineageTag: 4f0b71f6-1f8c-410a-8914-7a69102b8b0f
+		summarizeBy: none
+		sourceColumn: Job_Satisfaction
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fact_jobs = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(File.Contents("C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\data\processed\fact_jobs.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

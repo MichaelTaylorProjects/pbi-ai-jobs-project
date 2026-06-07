@@ -1,0 +1,33 @@
+table dim_location
+	lineageTag: f3acb71e-8ba6-48a6-a1ed-9b217b51d855
+
+	column Location_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 745497a0-d460-4b15-8a2e-d92c075a58a5
+		summarizeBy: none
+		sourceColumn: Location_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: fee8dde5-1d06-495a-9d82-6137155c2625
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_location = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(File.Contents("C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\data\processed\dim_location.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

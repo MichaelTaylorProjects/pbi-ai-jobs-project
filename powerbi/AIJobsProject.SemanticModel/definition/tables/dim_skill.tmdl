@@ -1,0 +1,33 @@
+table dim_skill
+	lineageTag: 805d36c0-bcb7-4fc8-8905-de1aa9d30702
+
+	column Skill_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a69067c0-6172-4bc6-a3cf-3af6214a40b2
+		summarizeBy: none
+		sourceColumn: Skill_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Required_Skills
+		dataType: string
+		lineageTag: 2dcf5c44-942a-45e1-8866-de7ca5640dad
+		summarizeBy: none
+		sourceColumn: Required_Skills
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_skill = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(File.Contents("C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\data\processed\dim_skill.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

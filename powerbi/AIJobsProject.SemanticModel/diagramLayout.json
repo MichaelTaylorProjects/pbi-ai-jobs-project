@@ -1,0 +1,177 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 1018.3067072034275,
+        "y": 201.12331889399076
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 50
+          },
+          "nodeIndex": "dim_job",
+          "nodeLineageTag": "80331446-d1b5-49b9-8bb5-2f7bbf0e42d8",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 284,
+            "y": 86
+          },
+          "nodeIndex": "dim_education",
+          "nodeLineageTag": "66e0a1ca-864b-4735-b4f0-7f1315d89c6c",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 568,
+            "y": 74
+          },
+          "nodeIndex": "dim_industry",
+          "nodeLineageTag": "b2bd909a-034d-49e6-b661-25ce275ec093",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 86
+          },
+          "nodeIndex": "dim_location",
+          "nodeLineageTag": "f3acb71e-8ba6-48a6-a1ed-9b217b51d855",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1568.9477147032771,
+            "y": 0
+          },
+          "nodeIndex": "dim_skill",
+          "nodeLineageTag": "805d36c0-bcb7-4fc8-8905-de1aa9d30702",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1140.3220967062773,
+            "y": 67.038786217374735
+          },
+          "nodeIndex": "dim_worktype",
+          "nodeLineageTag": "ab2e6a40-6315-4610-972d-54b4d6b69022",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1557.0505931846542,
+            "y": 266.13153093494009
+          },
+          "nodeIndex": "bridge_employee_skill",
+          "nodeLineageTag": "c912010b-77f6-4c50-9a66-af5be4a1d1f9",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 879.91790771618594,
+            "y": 508.06618072465614
+          },
+          "nodeIndex": "fact_jobs",
+          "nodeLineageTag": "8a5d09c9-618f-4587-9b48-4ae7871cfd22",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1201.9460414998096,
+            "y": 715.45635452931242
+          },
+          "nodeIndex": "MeasureTable",
+          "nodeLineageTag": "89b33ad0-54d7-448e-9d85-dc1a0a542e6b",
+          "size": {
+            "height": 336.2748688371596,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1852.9477147032771,
+            "y": 449.865611683236
+          },
+          "nodeIndex": "Column Selector",
+          "nodeLineageTag": "e5e02943-da26-4769-9af6-d275226e227c",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2136.9477147032771,
+            "y": 449.865611683236
+          },
+          "nodeIndex": "Row Selector",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2420.9477147032771,
+            "y": 449.865611683236
+          },
+          "nodeIndex": "Measure Selector",
+          "nodeLineageTag": "674d3881-9405-4f8a-9458-1560a82a0c5e",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 79.553182037699827,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

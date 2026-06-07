@@ -1,0 +1,129 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "3c790ea523e4aa474b88",
+  "position": {
+    "x": 526.79351656095844,
+    "y": 40.59196617336152,
+    "z": 0,
+    "height": 678.33685694150813,
+    "width": 753.20648343904156
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_worktype"
+                    }
+                  },
+                  "Property": "Remote_Work_Possibility"
+                }
+              },
+              "queryRef": "dim_worktype.Remote_Work_Possibility",
+              "nativeQueryRef": "Remote Work Possibility",
+              "active": true,
+              "displayName": "Remote Work Possibility"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Column Selector"
+                    }
+                  },
+                  "Property": "Column Selector"
+                }
+              },
+              "index": 0,
+              "length": 1
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_job"
+                    }
+                  },
+                  "Property": "Job_Title"
+                }
+              },
+              "queryRef": "dim_job.Job_Title",
+              "nativeQueryRef": "Job Title",
+              "active": true,
+              "displayName": "Job Title"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Row Selector"
+                    }
+                  },
+                  "Property": "Row Selector"
+                }
+              },
+              "index": 0,
+              "length": 1
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MeasureTable"
+                    }
+                  },
+                  "Property": "Average AI Risk"
+                }
+              },
+              "queryRef": "MeasureTable.Average AI Risk",
+              "nativeQueryRef": "Average AI Risk",
+              "displayName": "Average AI Risk"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Selector"
+                    }
+                  },
+                  "Property": "Measure Selector"
+                }
+              },
+              "index": 0,
+              "length": 1
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

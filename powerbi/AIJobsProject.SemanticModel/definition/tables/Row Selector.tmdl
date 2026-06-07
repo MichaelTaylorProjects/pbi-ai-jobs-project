@@ -1,0 +1,56 @@
+table 'Row Selector'
+	lineageTag: 2bfd63d5-41b1-489b-9cb4-bfc7f1ae381e
+
+	column 'Row Selector'
+		lineageTag: bc45280a-f4ce-45b7-a388-25aba501f93b
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parameter Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Parameter Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Fields'
+		isHidden
+		lineageTag: 7130c4e8-ee60-48eb-8036-2dc01c3a4b0b
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parameter Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Order'
+		isHidden
+		formatString: 0
+		lineageTag: 7b6d8cf6-da83-458f-9a51-b31b1757df93
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Row Selector' = calculated
+		mode: import
+		source =
+				{
+				    ("Company Size", NAMEOF('dim_industry'[Company_Size]), 0),
+				    ("Education Level", NAMEOF('dim_education'[Education_Level]), 1),
+				    ("Industry", NAMEOF('dim_industry'[Industry]), 2),
+				    ("AI Tool Usage", NAMEOF('dim_job'[AI_Tool_Usage]), 3),
+				    ("Automation Level", NAMEOF('dim_job'[Automation_Level]), 4),
+				    ("Job Title", NAMEOF('dim_job'[Job_Title]), 5),
+				    ("Upskilling Needed", NAMEOF('dim_job'[Upskilling_Needed]), 6),
+				    ("Country", NAMEOF('dim_location'[Country]), 7),
+				    ("Required Skills", NAMEOF('dim_skill'[Required_Skills]), 8),
+				    ("Remote Work Possibility", NAMEOF('dim_worktype'[Remote_Work_Possibility]), 9)
+				}
+
+	annotation PBI_Id = 8d37cb1e51d64535b35e741bd111a420
+

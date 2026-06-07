@@ -1,0 +1,33 @@
+table dim_worktype
+	lineageTag: ab2e6a40-6315-4610-972d-54b4d6b69022
+
+	column Worktype_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 06ef122a-c5e3-4a81-a70e-66ab10242f41
+		summarizeBy: none
+		sourceColumn: Worktype_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Remote_Work_Possibility
+		dataType: string
+		lineageTag: ca6b5a2b-8e70-459c-a50d-caab94e15eca
+		summarizeBy: none
+		sourceColumn: Remote_Work_Possibility
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_worktype = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(File.Contents("C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\data\processed\dim_worktype.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

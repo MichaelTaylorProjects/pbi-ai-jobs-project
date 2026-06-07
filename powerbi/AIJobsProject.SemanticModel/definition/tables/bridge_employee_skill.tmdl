@@ -1,0 +1,36 @@
+table bridge_employee_skill
+	lineageTag: c912010b-77f6-4c50-9a66-af5be4a1d1f9
+
+	column Employee_ID
+		dataType: string
+		isHidden
+		lineageTag: f7367176-0761-4b04-88b7-4169e82e37fc
+		summarizeBy: none
+		sourceColumn: Employee_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Skill_ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 528f3ed7-73f9-4ae3-b7c9-49cbb47ce057
+		summarizeBy: none
+		sourceColumn: Skill_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition bridge_employee_skill = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(File.Contents("C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\data\processed\bridge_employee_skill.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

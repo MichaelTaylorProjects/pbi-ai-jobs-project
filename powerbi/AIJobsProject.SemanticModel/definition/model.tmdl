@@ -1,0 +1,29 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["dim_job","dim_education","dim_industry","dim_location","dim_skill","dim_worktype","bridge_employee_skill","fact_jobs","MeasureTable"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_job
+ref table dim_education
+ref table dim_industry
+ref table dim_location
+ref table dim_skill
+ref table dim_worktype
+ref table bridge_employee_skill
+ref table fact_jobs
+ref table MeasureTable
+ref table 'Column Selector'
+ref table 'Row Selector'
+ref table 'Measure Selector'
+
+ref cultureInfo en-US
+
