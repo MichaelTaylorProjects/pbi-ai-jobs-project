@@ -23,13 +23,13 @@
                       "Entity": "dim_job"
                     }
                   },
-                  "Property": "Upskilling Needed"
+                  "Property": "Job Title"
                 }
               },
-              "queryRef": "dim_job.Upskilling Needed",
-              "nativeQueryRef": "Upskilling Needed",
+              "queryRef": "dim_job.Job Title",
+              "nativeQueryRef": "Job Title",
               "active": true,
-              "displayName": "Upskilling Needed"
+              "displayName": "Job Title"
             }
           ],
           "fieldParameters": [

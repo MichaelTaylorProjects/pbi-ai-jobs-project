@@ -69,7 +69,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''dim_job''[Upskilling Needed]'"
+                                "Value": "'''dim_industry''[Industry]'"
                               }
                             }
                           ]
@@ -97,7 +97,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''dim_job''[Upskilling Needed]'"
+                                      "Value": "'''dim_industry''[Industry]'"
                                     }
                                   }
                                 ]
@@ -121,7 +121,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "Upskilling Needed"
+                            "0": "Industry"
                           }
                         ]
                       }

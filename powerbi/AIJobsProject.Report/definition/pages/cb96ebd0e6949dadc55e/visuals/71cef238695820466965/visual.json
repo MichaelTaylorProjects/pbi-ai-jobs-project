@@ -79,15 +79,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_job"
+                      "Entity": "dim_industry"
                     }
                   },
-                  "Property": "Upskilling Needed"
+                  "Property": "Industry"
                 }
               },
-              "queryRef": "dim_job.Upskilling Needed",
-              "nativeQueryRef": "Upskilling Needed",
-              "displayName": "Upskilling Needed"
+              "queryRef": "dim_industry.Industry",
+              "nativeQueryRef": "Industry",
+              "displayName": "Industry"
             }
           ],
           "fieldParameters": [
