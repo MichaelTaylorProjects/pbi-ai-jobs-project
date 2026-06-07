@@ -13,35 +13,35 @@ table dim_job
 
 		annotation SummarizationSetBy = Automatic
 
-	column Job_Title
+	column 'Job Title'
 		dataType: string
 		lineageTag: 818f0658-4ded-45a7-8a3c-940500ad56ed
 		summarizeBy: none
-		sourceColumn: Job_Title
+		sourceColumn: Job Title
 
 		annotation SummarizationSetBy = Automatic
 
-	column Automation_Level
+	column 'Automation Level'
 		dataType: string
 		lineageTag: e6d3dfb8-62ba-4244-9645-e4753a68bd6d
 		summarizeBy: none
-		sourceColumn: Automation_Level
+		sourceColumn: Automation Level
 
 		annotation SummarizationSetBy = Automatic
 
-	column AI_Tool_Usage
+	column 'AI Tool Usage'
 		dataType: string
 		lineageTag: 4e255d4c-c115-4434-9812-1012e0e0e581
 		summarizeBy: none
-		sourceColumn: AI_Tool_Usage
+		sourceColumn: AI Tool Usage
 
 		annotation SummarizationSetBy = Automatic
 
-	column Upskilling_Needed
+	column 'Upskilling Needed'
 		dataType: string
 		lineageTag: 59f791ff-dfdb-4b82-ae66-c86024522259
 		summarizeBy: none
-		sourceColumn: Upskilling_Needed
+		sourceColumn: Upskilling Needed
 
 		annotation SummarizationSetBy = Automatic
 
@@ -49,9 +49,10 @@ table dim_job
 		mode: import
 		source =
 				let
-				    Source = Parquet.Document(File.Contents("C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\data\processed\dim_job.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				    Source = Parquet.Document(File.Contents("C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\data\processed\dim_job.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
+				    #"Renamed Columns" = Table.RenameColumns(Source,{{"AI_Tool_Usage", "AI Tool Usage"}, {"Automation_Level", "Automation Level"}, {"Job_Title", "Job Title"}, {"Upskilling_Needed", "Upskilling Needed"}})
 				in
-				    Source
+				    #"Renamed Columns"
 
 	annotation PBI_ResultType = Table
 

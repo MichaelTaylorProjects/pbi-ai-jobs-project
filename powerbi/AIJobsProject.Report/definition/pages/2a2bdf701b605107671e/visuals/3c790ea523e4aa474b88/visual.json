@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "3c790ea523e4aa474b88",
   "position": {
-    "x": 526.79351656095844,
-    "y": 40.59196617336152,
+    "x": 460.23648648648646,
+    "y": 29.605855855855854,
     "z": 0,
-    "height": 678.33685694150813,
-    "width": 753.20648343904156
+    "height": 1024.0934684684685,
+    "width": 1447.9954954954953
   },
   "visual": {
     "visualType": "pivotTable",
@@ -19,16 +19,32 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_worktype"
+                      "Entity": "dim_industry"
                     }
                   },
-                  "Property": "Remote_Work_Possibility"
+                  "Property": "Industry"
                 }
               },
-              "queryRef": "dim_worktype.Remote_Work_Possibility",
-              "nativeQueryRef": "Remote Work Possibility",
+              "queryRef": "dim_industry.Industry",
+              "nativeQueryRef": "Industry",
               "active": true,
-              "displayName": "Remote Work Possibility"
+              "displayName": "Industry"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_job"
+                    }
+                  },
+                  "Property": "AI Tool Usage"
+                }
+              },
+              "queryRef": "dim_job.AI Tool Usage",
+              "nativeQueryRef": "AI Tool Usage",
+              "active": true,
+              "displayName": "AI Tool Usage"
             }
           ],
           "fieldParameters": [
@@ -44,7 +60,7 @@
                 }
               },
               "index": 0,
-              "length": 1
+              "length": 2
             }
           ]
         },
@@ -55,16 +71,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_job"
+                      "Entity": "dim_industry"
                     }
                   },
-                  "Property": "Job_Title"
+                  "Property": "Company Size"
                 }
               },
-              "queryRef": "dim_job.Job_Title",
-              "nativeQueryRef": "Job Title",
+              "queryRef": "dim_industry.Company Size",
+              "nativeQueryRef": "Company Size",
               "active": true,
-              "displayName": "Job Title"
+              "displayName": "Company Size"
             }
           ],
           "fieldParameters": [
@@ -123,6 +139,108 @@
       "sortDefinition": {
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "subTotals": [
+        {
+          "properties": {
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Minimal'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

@@ -50,6 +50,27 @@
           "type": "BaseTheme"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "AI_Risk_Analysis9319429690220034.svg",
+          "path": "AI_Risk_Analysis9319429690220034.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Data_Extract9746385149255491.svg",
+          "path": "Data_Extract9746385149255491.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Executive_Summary87943204724659.svg",
+          "path": "Executive_Summary87943204724659.svg",
+          "type": "Image"
+        }
+      ]
     }
   ],
   "settings": {

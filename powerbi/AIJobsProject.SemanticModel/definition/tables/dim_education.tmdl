@@ -13,11 +13,11 @@ table dim_education
 
 		annotation SummarizationSetBy = Automatic
 
-	column Education_Level
+	column 'Education Level'
 		dataType: string
 		lineageTag: 971309e4-2373-4815-8c80-ab3a597bed20
 		summarizeBy: none
-		sourceColumn: Education_Level
+		sourceColumn: Education Level
 
 		annotation SummarizationSetBy = Automatic
 
@@ -25,9 +25,10 @@ table dim_education
 		mode: import
 		source =
 				let
-				    Source = Parquet.Document(File.Contents("C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\data\processed\dim_education.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				    Source = Parquet.Document(File.Contents("C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\data\processed\dim_education.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
+				    #"Renamed Columns" = Table.RenameColumns(Source,{{"Education_Level", "Education Level"}})
 				in
-				    Source
+				    #"Renamed Columns"
 
 	annotation PBI_ResultType = Table
 

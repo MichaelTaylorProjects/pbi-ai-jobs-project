@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "d535fa0ddb5324780a3d",
+  "position": {
+    "x": 20,
+    "y": 45.555555555555557,
+    "z": 0,
+    "height": 314.44444444444446,
+    "width": 674.44444444444446
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_skill"
+                    }
+                  },
+                  "Property": "Required Skills"
+                }
+              },
+              "queryRef": "dim_skill.Required_Skills",
+              "nativeQueryRef": "Required_Skills"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MeasureTable"
+                    }
+                  },
+                  "Property": "Average Salary"
+                }
+              },
+              "queryRef": "MeasureTable.Average Salary",
+              "nativeQueryRef": "Average Salary"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

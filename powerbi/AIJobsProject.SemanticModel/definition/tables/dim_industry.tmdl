@@ -21,11 +21,11 @@ table dim_industry
 
 		annotation SummarizationSetBy = Automatic
 
-	column Company_Size
+	column 'Company Size'
 		dataType: string
 		lineageTag: 4815e6a8-c52f-4360-b114-c8bf9e5389f1
 		summarizeBy: none
-		sourceColumn: Company_Size
+		sourceColumn: Company Size
 
 		annotation SummarizationSetBy = Automatic
 
@@ -33,9 +33,10 @@ table dim_industry
 		mode: import
 		source =
 				let
-				    Source = Parquet.Document(File.Contents("C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\data\processed\dim_industry.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				    Source = Parquet.Document(File.Contents("C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\data\processed\dim_industry.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
+				    #"Renamed Columns" = Table.RenameColumns(Source,{{"Company_Size", "Company Size"}})
 				in
-				    Source
+				    #"Renamed Columns"
 
 	annotation PBI_ResultType = Table
 

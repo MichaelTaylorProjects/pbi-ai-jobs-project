@@ -13,11 +13,11 @@ table dim_skill
 
 		annotation SummarizationSetBy = Automatic
 
-	column Required_Skills
+	column 'Required Skills'
 		dataType: string
 		lineageTag: 2dcf5c44-942a-45e1-8866-de7ca5640dad
 		summarizeBy: none
-		sourceColumn: Required_Skills
+		sourceColumn: Required Skills
 
 		annotation SummarizationSetBy = Automatic
 
@@ -25,9 +25,10 @@ table dim_skill
 		mode: import
 		source =
 				let
-				    Source = Parquet.Document(File.Contents("C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\data\processed\dim_skill.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				    Source = Parquet.Document(File.Contents("C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\data\processed\dim_skill.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
+				    #"Renamed Columns" = Table.RenameColumns(Source,{{"Required_Skills", "Required Skills"}})
 				in
-				    Source
+				    #"Renamed Columns"
 
 	annotation PBI_ResultType = Table
 

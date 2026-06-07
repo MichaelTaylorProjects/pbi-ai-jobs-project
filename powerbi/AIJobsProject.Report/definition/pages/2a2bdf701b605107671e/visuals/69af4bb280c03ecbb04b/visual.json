@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "69af4bb280c03ecbb04b",
   "position": {
-    "x": 0,
-    "y": 9.266968325791856,
+    "x": 170.84838963079341,
+    "y": 18.7745483110762,
     "z": 2,
-    "height": 350.98642533936652,
-    "width": 246.73303167420815,
+    "height": 334.18695993715636,
+    "width": 274.10840534171251,
     "tabOrder": 2
   },
   "visual": {
@@ -91,6 +91,13 @@
                                 "Value": "'''dim_job''[Job_Title]'"
                               }
                             }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'''dim_industry''[Company Size]'"
+                              }
+                            }
                           ]
                         ]
                       }
@@ -121,6 +128,17 @@
                                   }
                                 ]
                               }
+                            ],
+                            [
+                              {
+                                "0": [
+                                  {
+                                    "Literal": {
+                                      "Value": "'''dim_industry''[Company Size]'"
+                                    }
+                                  }
+                                ]
+                              }
                             ]
                           ],
                           "columns": [
@@ -141,6 +159,9 @@
                         "valueMap": [
                           {
                             "0": "Job Title"
+                          },
+                          {
+                            "0": "Company Size"
                           }
                         ]
                       }
@@ -166,6 +187,21 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

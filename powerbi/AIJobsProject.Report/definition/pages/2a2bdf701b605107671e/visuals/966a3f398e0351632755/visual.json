@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "966a3f398e0351632755",
   "position": {
-    "x": 0,
-    "y": 360.2533936651584,
+    "x": 174.60329929300866,
+    "y": 375.490966221524,
     "z": 1,
-    "height": 359.09502262443436,
-    "width": 246.73303167420815,
+    "height": 326.67714061272585,
+    "width": 270.35349567949726,
     "tabOrder": 1
   },
   "visual": {
@@ -68,7 +68,14 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''dim_worktype''[Remote_Work_Possibility]'"
+                                "Value": "'''dim_industry''[Industry]'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'''dim_job''[AI Tool Usage]'"
                               }
                             }
                           ]
@@ -96,7 +103,18 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''dim_worktype''[Remote_Work_Possibility]'"
+                                      "Value": "'''dim_industry''[Industry]'"
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "0": [
+                                  {
+                                    "Literal": {
+                                      "Value": "'''dim_job''[AI Tool Usage]'"
                                     }
                                   }
                                 ]
@@ -120,7 +138,10 @@
                         },
                         "valueMap": [
                           {
-                            "0": "Remote Work Possibility"
+                            "0": "Industry"
+                          },
+                          {
+                            "0": "AI Tool Usage"
                           }
                         ]
                       }
@@ -146,6 +167,21 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

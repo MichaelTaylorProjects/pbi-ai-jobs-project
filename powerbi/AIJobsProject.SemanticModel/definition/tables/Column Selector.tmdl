@@ -40,15 +40,15 @@ table 'Column Selector'
 		mode: import
 		source =
 				{
-				    ("Company Size", NAMEOF('dim_industry'[Company_Size]), 0),
-				    ("Education Level", NAMEOF('dim_education'[Education_Level]), 1),
+				    ("Company Size", NAMEOF('dim_industry'[Company Size]), 0),
+				    ("Education Level", NAMEOF('dim_education'[Education Level]), 1),
 				    ("Industry", NAMEOF('dim_industry'[Industry]), 2),
-				    ("AI Tool Usage", NAMEOF('dim_job'[AI_Tool_Usage]), 3),
-				    ("Automation Level", NAMEOF('dim_job'[Automation_Level]), 4),
-				    ("Job Title", NAMEOF('dim_job'[Job_Title]), 5),
-				    ("Upskilling Needed", NAMEOF('dim_job'[Upskilling_Needed]), 6),
+				    ("AI Tool Usage", NAMEOF('dim_job'[AI Tool Usage]), 3),
+				    ("Automation Level", NAMEOF('dim_job'[Automation Level]), 4),
+				    ("Job Title", NAMEOF('dim_job'[Job Title]), 5),
+				    ("Upskilling Needed", NAMEOF('dim_job'[Upskilling Needed]), 6),
 				    ("Country", NAMEOF('dim_location'[Country]), 7),
-				    ("Required Skills", NAMEOF('dim_skill'[Required_Skills]), 8),
+				    ("Required Skills", NAMEOF('dim_skill'[Required Skills]), 8),
 				    ("Remote Work Possibility", NAMEOF('dim_worktype'[Remote_Work_Possibility]), 9)
 				}
 
