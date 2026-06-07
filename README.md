@@ -2,11 +2,13 @@
 
 ## Report Preview
 
-![Executive Summary](docs/images/report-overview.png)
+![Executive Summary](C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\docs\images\Executive Summary.png)
+![Data Extract](C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\docs\images\Data Extract.png)
+![AI Risk Analysis](C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\docs\images\AI Risk Analysis.png)
 
 ## Semantic Model
 
-![Power BI Model View](docs/images/model-view.png)
+![Power BI Model View](C:\Users\mjt70\OneDrive\Desktop\Repo\pbi-ai-jobs-project\docs\images\Model View.png)
 
 ## Overview
 
