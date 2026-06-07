@@ -2,13 +2,13 @@
 
 ## Report Preview
 
-![Executive Summary](docs\images\executive-summary.png)
-![Data Extract](docs\images\data-extract.png)
-![AI Risk Analysis](docs\images\ai-risk-analysis.png)
+![Executive Summary](docs/images/executive-summary.png)
+![Data Extract](docs/images/data-extract.png)
+![AI Risk Analysis](docs/images/ai-risk-analysis.png)
 
 ## Semantic Model
 
-![Power BI Model View](docs\images\model-view.png)
+![Power BI Model View](docs/images/model-view.png)
 
 ## Overview
 
