@@ -1,9 +1,0 @@
-import pandas as pd
-
-#Load CSV
-df = pd.read_csv('../data/AI_Impact_on_Jobs_2030.csv')
-
-#Save as parquet for better formatting
-df.to_parquet('../data/jobs_raw.parquet', index=False)
-
-print("Data ingested successfull")
